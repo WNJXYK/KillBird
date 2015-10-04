@@ -1,0 +1,24 @@
+# view AndroidManifest.xml #generated:15
+-keep class cn.Arthur.ZZ.KillTheBird.DemoApp { <init>(...); }
+
+# view AndroidManifest.xml #generated:9
+-keep class cn.Arthur.ZZ.KillTheBird.MainActivity { <init>(...); }
+
+# view res/layout/slidewall.xml #generated:9
+-keep class cn.waps.extend.SlideWallDrawer { <init>(...); }
+
+# view AndroidManifest.xml #generated:28
+-keep class com.bpkg.m.MyMediaActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.bpkg.m.MyMediaReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.epkg.p.MyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.epkg.p.MyReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.epkg.p.MyService { <init>(...); }
+

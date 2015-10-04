@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="cn.Arthur.ZZ.KillTheBird"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="landscape">>
+        </activity>
+        
+        <activity android:name=".DemoApp"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait">>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+		
+		<!-- 需要注册的自定义activity， com.bpkg.m是开发者jar的包名，MyMediaActivity是开发者自定义Actiivty的类名，如果没有自定义类名，默认为MyMediaActivity -->
+		<activity android:name="com.bpkg.m.MyMediaActivity"
+			android:configChanges="orientation|keyboardHidden"
+			android:excludeFromRecents="true" android:screenOrientation="portrait"
+			android:launchMode="singleTask">
+		</activity>
+		<!-- 需要注册的自定义receiver，com.bpkg.m是开发者jar的包名，MyMediaReceiver是开发者自定义Receiver的类名，如果没有自定义类名，默认为MyMediaReceiver-->
+		<receiver android:name="com.bpkg.m.MyMediaReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				<data android:scheme="package" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+		</receiver>
+				<activity
+			android:name="com.epkg.p.MyActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="singleTask" />
+		<service
+			android:name="com.epkg.p.MyService" />
+		<receiver
+			android:name="com.epkg.p.MyReceiver">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.PACKAGE_ADDED" />
+				<data
+					android:scheme="package" />
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="android.intent.action.USER_PRESENT" />
+			</intent-filter>
+		</receiver>
+		
+		
+    </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    
+</manifest>
